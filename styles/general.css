@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Pobeda;
+}
+
+@font-face {
+    font-family: Pobeda;
+    src: url(../fonts/pobeda-regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url(../fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+
+.dflex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.dflex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 3% 9%;
+}
+
+header .navbar .logo img {
+    width: 100%;
+}
+
+header .navbar {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+
+    height: 5svh;
+    background: linear-gradient(180deg, #FFFFFF -31.5%, rgba(255, 255, 255, 0) 96.67%);
+
+}
+
+header .navbar ul {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+header .navbar li {
+    list-style-type: none;
+    padding: 0px 30px;
+
+}
+
+header .navbar li a{
+    text-decoration: none;
+    color: black;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+header .corp-name {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 100%;
+
+}
+
+header .corp-name span {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+
+    display: inline-block;
+    width: 100%;
+}
+
+
+footer {
+    padding: 3% 7%;
+    background-color: #60748D;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+footer .refs {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    color: white;
+    list-style-type: none;
+
+}
+
+footer .refs li {
+    margin: 20px 0px;
+}
+
+footer .feedback {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .feedback div {
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+
+
+footer .logo-first>img {
+    width: 100%;
+}
+
+footer .logo-second>img {
+    width: 100%;
+}
