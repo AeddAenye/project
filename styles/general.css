@@ -19,21 +19,17 @@ body {
     src: url(../fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
-
-.dflex-col {
-    display: flex;
-    flex-direction: column;
+:root {
+    --blue: #60748D;
 }
 
-.dflex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-
+/* Стили хэдера */
 header {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 10;
+
 }
 
 header .navbar {
@@ -41,30 +37,25 @@ header .navbar {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    padding: 3% 9%;
+    padding: 3% 10%;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+    height: 5svh;
+    background: linear-gradient(180deg, #FFFFFF -31.5%, rgba(255, 255, 255, 0) 96.67%);
+    z-index: 10;
 }
 
 header .navbar .logo img {
     width: 100%;
 }
 
-header .navbar {
-    font-size: 2.25rem;
-    font-weight: 400;
-    line-height: 2.25rem;
-    letter-spacing: 0em;
-    text-align: left;
-
-    height: 5svh;
-    background: linear-gradient(180deg, #FFFFFF -31.5%, rgba(255, 255, 255, 0) 96.67%);
-
-}
 
 header .navbar ul {
     padding: 0;
     margin: 0;
-
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -73,23 +64,28 @@ header .navbar ul {
 header .navbar li {
     list-style-type: none;
     padding: 0px 30px;
-
 }
 
-header .navbar li a{
+
+
+header .navbar li a {
     text-decoration: none;
     color: black;
+
+    transition: all 0.2s ease;
 }
 
-li:hover {
+header .navbar li a:hover {
     cursor: pointer;
+    color: white;
+    font-size: 2.5rem;
 }
 
 header .corp-name {
     margin: 0 auto;
     margin-top: 40px;
     width: 100%;
-
+    z-index: 10;
 }
 
 header .corp-name span {
@@ -104,17 +100,64 @@ header .corp-name span {
     width: 100%;
 }
 
+header.main-page {
+    height: 150svh;
+    background: url(../imgs/main-page-backgrnd.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(96, 116, 141, 0.20);
+}
 
-footer {
-    padding: 3% 7%;
-    background-color: #60748D;
+header.main-page .background {
+    background: rgba(96, 116, 141, 0.20);
+    width: 100%;
+    height: 150svh;
+    position: absolute;
+}
 
+.tower {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
 
 }
 
+.tower .img {
+    width: 30%;
+    height: 100%;
+    margin: 10svw 0px;
+}
+
+.tower .img img {
+    width: 100%;
+}
+
+.tower .questions {
+    width: 60%;
+}
+
+.tower .questions div{
+margin: 15svw 0px;
+}
+
+.tower .questions div span {
+    color: #000;
+    font-family: Pobeda;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Стили футера */
+footer {
+    padding: 3% 10%;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 footer .refs {
     font-size: 2.25rem;
@@ -122,8 +165,6 @@ footer .refs {
     line-height: 2.25rem;
     letter-spacing: 0em;
     text-align: left;
-
-
 }
 
 footer ul {
@@ -136,14 +177,21 @@ footer ul {
     align-items: center;
 }
 
-footer ul li {
-    color: white;
-    list-style-type: none;
-
-}
 
 footer .refs li {
     margin: 20px 0px;
+    list-style-type: none;
+}
+
+footer .refs li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+footer .refs li a:hover {
+    color: black;
+    font-size: 2.5rem;
 }
 
 footer .feedback {
@@ -165,12 +213,40 @@ footer .feedback div {
     margin: 20px 0px;
 }
 
-
-
 footer .logo-first>img {
     width: 100%;
 }
 
 footer .logo-second>img {
     width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    header .navbar li {
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    header .navbar ul {
+        display: none;
+    }
+
+    header .corp-name span {
+        font-size: 3rem;
+    }
+
+    .tower .questions div span{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 680px){
+    header .corp-name span {
+        font-size: 2rem;
+    }
+
+    .tower .questions div span{
+        font-size: 2rem;
+    }
 }
