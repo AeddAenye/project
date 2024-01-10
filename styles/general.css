@@ -81,7 +81,7 @@ header .navbar li a:hover {
     font-weight: bold;
 }
 
-header .navbar .burger{
+header .navbar .burger {
     display: none;
 }
 
@@ -455,7 +455,7 @@ header.develop .space-bot .name {
     line-height: normal;
 }
 
-header.develop.space-bot {
+header.develop .space-bot {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -464,6 +464,10 @@ header.develop.space-bot {
     top: 40%;
     left: 5%;
 
+}
+
+section.space-bot-mobile {
+    display: none;
 }
 
 header.develop.space-bot div {
@@ -498,11 +502,11 @@ section.robot-card {
 
 section.robot-card .pic {
     width: 80%;
-    position: relative;
 }
 
 section.robot-card .pic img {
     width: 100%;
+    height: 100%;
     margin-top: -25%;
 }
 
@@ -552,19 +556,27 @@ section.robot-card .description .text {
 
 section.robot-card .other-pics {
     margin-top: 20px;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+section.robot-card .other-pics .pic{
+    width: 90%;
+    height: 70%;
+}
+
+section.robot-card .other-pics .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 section.robot-card .other-pics>.pic:nth-child(2) {
     margin: 0px 70px;
 }
 
-section.robot-card .other-pics>.pic>img {
-    width: 100%;
-}
 
 
 section.dev-cards .card .pic img {
@@ -853,7 +865,7 @@ footer.arc .feedback .tel-nums {
 
 @media screen and (max-width: 980px) {
 
-    header .navbar{
+    header .navbar {
         padding: 5%;
     }
 
@@ -866,7 +878,7 @@ footer.arc .feedback .tel-nums {
         margin-bottom: -20px;
     }
 
-    header.history{
+    header.history {
         height: 150svh;
         min-height: 680px;
         background: url(../imgs/history-header-mobile.png);
@@ -876,12 +888,12 @@ footer.arc .feedback .tel-nums {
         background-color: rgba(96, 116, 141, 0.20);
     }
 
-    header.history .question span{
+    header.history .question span {
         color: black;
         font-weight: bold;
     }
 
-    header.history .question{
+    header.history .question {
         top: 0;
         left: 0;
 
@@ -901,7 +913,7 @@ footer.arc .feedback .tel-nums {
         padding: 7%;
     }
 
-    header .navbar ul{
+    header .navbar ul {
         display: none;
     }
 
@@ -927,20 +939,20 @@ footer.arc .feedback .tel-nums {
         background-color: black;
     }
 
-    header .corp-name{
+    header .corp-name {
         display: none;
     }
 
-    .tower .questions{
+    .tower .questions {
         display: none;
     }
 
-    .tower .img{
+    .tower .img {
         width: 70%;
     }
 
     footer .feedback,
-    footer .refs{
+    footer .refs {
         width: 40%;
     }
 
@@ -949,43 +961,147 @@ footer.arc .feedback .tel-nums {
         font-size: 1.2rem;
     }
 
-    footer .refs li{
+    footer .refs li {
         margin: 10px 0px;
     }
-    header.history .question span{
+
+    header.history .question span {
         font-size: 2rem;
 
     }
-    section.history .card .pic{
+
+    section.history .card .pic {
         width: 50svw;
     }
 
-    section.history .description{
-       font-size: 0.8rem;
-    }
-
-    section.history .card .text{
+    section.history .description {
         font-size: 0.8rem;
     }
 
+    section.history .card .text {
+        font-size: 0.8rem;
+    }
+
+    section.dev-cards .card .description .name {
+        margin-bottom: 10px;
+    }
+
+    section.dev-cards .card .pic {
+        margin-right: 20px;
+    }
+
 }
 
-@media screen and (max-width: 600px){
-    section.info-card, section.map{
+@media screen and (max-width: 800px) {
+    .space-bot .text {
+        display: none;
+    }
+
+    section.space-bot-mobile {
+        display: block;
+
+        color: #000;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin: 6% 8% 6% 8%;
+    }
+
+    section.robot-card .description{
+        width: 90%;
+    }
+    section.robot-card .pic{
+        width: 120%;
+    }
+
+    section.robot-card .other-pics {
+        margin-top: 10px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    section.robot-card .other-pics>.pic:nth-child(2){
+        margin: 0px 10px;
+    }
+
+
+    section.robot-card .other-pics .pic{
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    section.dev-cards .card {
+        flex-direction: column;
+
+    }
+
+    section.dev-cards .card .description,
+    section.dev-cards .card .pic {
+        width: 100%;
+    }
+
+    section.dev-cards .card .description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    section.dev-cards .card .name{
+        text-align: center;
+        margin-bottom: 0px;
+        margin: 20px 0px !important;
+    }
+
+    section.dev-cards .card .name,
+    section.dev-cards .card .text {
+        width: 100%;
+    }
+
+    section.dev-cards .card .pic {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    section.info-card,
+    section.map {
         margin: 5%;
     }
 
-    section.info-card{
+    section.info-card {
         margin-top: 100px;
+    }
+
+    header .space-bot{
+        top: 30% !important;
+    }
+
+    header .space-bot .name{
+        font-size: 1.5rem;
+    }
+
+    header.develop{
+        min-height: 500px;
     }
 }
 
-@media screen and (max-width: 500px){
-    section.history{
+@media screen and (max-width: 500px) {
+    section.history {
         margin: 10%;
     }
 
-    header .navbar{
+    section.robot-card .other-pics .pic{
+        height: 70px;
+    }
+
+    header .navbar {
         padding: 10%;
     }
 
@@ -1004,70 +1120,69 @@ footer.arc .feedback .tel-nums {
         align-items: center;
     }
 
-    section.history .card{
+    section.history .card {
         flex-direction: column;
     }
 
-    section.history .card .pic{
+    section.history .card .pic {
         width: 100%;
         margin-right: 0;
     }
-    section.history .card .pic img{
+
+    section.history .card .pic img {
         width: 100%;
 
     }
 
-    section.history .description{
+    section.history .description {
         margin-bottom: 20px;
         font-size: 1rem;
     }
 
-    section.history .card .text{
+    section.history .card .text {
         font-size: 1rem;
         margin: 20px 0px;
     }
 
-    section.history .card .text span{
+    section.history .card .text span {
         display: inline-block;
         width: 100%;
     }
 
-    section.info-card{
+    section.info-card {
         margin-top: 50px;
         margin-bottom: 0;
     }
 
-    section.map{
+    section.map {
         background-color: var(--blue);
         padding: 20px;
         margin-top: 0;
         margin-bottom: 20%;
     }
 
-    section.map iframe{
+    section.map iframe {
         height: 200px;
     }
 
 
-section.info-card .description div{
-    font-size: 1rem !important;
-}
-}
-
-@media screen and (max-width: 400px){
-
+    section.info-card .description div {
+        font-size: 1rem !important;
+    }
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 400px) {}
+
+@media screen and (max-width: 300px) {
 
     header .navbar .logo img {
         width: 70%;
         margin-bottom: -10px;
-        
+
     }
 
     footer .feedback,
-    footer .refs{
+    footer .refs {
         width: 50%;
     }
 }
