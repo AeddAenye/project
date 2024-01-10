@@ -562,7 +562,7 @@ section.robot-card .other-pics {
     justify-content: center;
 }
 
-section.robot-card .other-pics .pic{
+section.robot-card .other-pics .pic {
     width: 90%;
     height: 70%;
 }
@@ -706,8 +706,8 @@ section.scheme {
 }
 
 section.scheme .pic.tower {
-    width: 450px;
-    height: 770px;
+    width: 20%;
+    margin: 0px 50px;
 }
 
 section.scheme .tower img {
@@ -716,29 +716,6 @@ section.scheme .tower img {
     object-fit: cover;
 }
 
-section.scheme .arrow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-section.scheme .arrow {
-    width: 16px;
-    height: 730px;
-    margin-right: -70px;
-    margin-bottom: -20px;
-}
-
-section.scheme .size span {
-    font-family: Plus Jakarta Sans;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-
-    margin: 10px;
-}
 
 section.scheme .text {
     color: #000;
@@ -748,7 +725,6 @@ section.scheme .text {
     font-weight: 400;
     line-height: normal;
     width: 60%;
-    margin-left: 80px;
 }
 
 section.slider {
@@ -804,13 +780,18 @@ section.slider .other-slides {
     flex-direction: row;
     justify-content: center;
 }
+section.slider .other-slides .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 
-section.slider .other-slides>.pic {
-    width: 15%;
+section.slider .other-slides .pic {
+    width: 100%;
     margin: 10px;
 }
 
-section.slider .other-slides>.pic>img {
+section.slider .other-slides .pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -828,7 +809,6 @@ footer.arc .feedback .tel-nums {
 @media screen and (max-width: 1450px) {
     section.scheme .text {
         font-size: 1.25rem;
-        margin-left: 0px;
     }
 }
 
@@ -839,31 +819,17 @@ footer.arc .feedback .tel-nums {
     }
 
     section.scheme .pic.tower {
-        width: 350px;
-        height: 670px;
-    }
-
-    section.scheme .tower img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    section.scheme .arrow img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    section.scheme .arrow {
-        width: 8px;
-        height: 600px;
-        margin-right: -50px;
-        margin-bottom: -20px;
+        width: 35%;
+        margin: 0px 50px;
     }
 }
 
 @media screen and (max-width: 980px) {
+
+    section.scheme .pic.tower {
+        width: 35%;
+        margin: 0px 30px;
+    }
 
     header .navbar {
         padding: 5%;
@@ -918,7 +884,7 @@ footer.arc .feedback .tel-nums {
     }
 
     header .navbar .logo img {
-        width: 150%;
+        width: 120%;
         margin-bottom: -10px;
     }
 
@@ -997,23 +963,27 @@ footer.arc .feedback .tel-nums {
         display: none;
     }
 
+    section.scheme .pic.tower {
+        width: 35%;
+        margin: 50px 0px;
+    }
+
     section.space-bot-mobile {
         display: block;
-
         color: #000;
         font-family: Montserrat;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-
         margin: 6% 8% 6% 8%;
     }
 
-    section.robot-card .description{
+    section.robot-card .description {
         width: 90%;
     }
-    section.robot-card .pic{
+
+    section.robot-card .pic {
         width: 120%;
     }
 
@@ -1024,14 +994,33 @@ footer.arc .feedback .tel-nums {
         flex-direction: row;
         justify-content: center;
     }
-    section.robot-card .other-pics>.pic:nth-child(2){
+
+    section.robot-card .other-pics>.pic:nth-child(2) {
         margin: 0px 10px;
     }
 
 
-    section.robot-card .other-pics .pic{
+    section.robot-card .other-pics .pic {
         height: 110px;
     }
+
+    section.scheme {
+        flex-direction: column;
+        margin: 8%;
+    }
+
+    section.scheme .text {
+        width: 100%;
+    }
+
+    section.slider .other-slides{
+        flex-direction: column;
+    }
+
+    section.slider .interface .slide{
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 760px) {
@@ -1045,14 +1034,14 @@ footer.arc .feedback .tel-nums {
         width: 100%;
     }
 
-    section.dev-cards .card .description{
+    section.dev-cards .card .description {
         display: flex;
         justify-content: center;
         align-items: center;
         height: auto;
     }
 
-    section.dev-cards .card .name{
+    section.dev-cards .card .name {
         text-align: center;
         margin-bottom: 0px;
         margin: 20px 0px !important;
@@ -1066,6 +1055,7 @@ footer.arc .feedback .tel-nums {
     section.dev-cards .card .pic {
         margin-right: 0;
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1079,15 +1069,19 @@ footer.arc .feedback .tel-nums {
         margin-top: 100px;
     }
 
-    header .space-bot{
+    header .space-bot {
         top: 30% !important;
     }
 
-    header .space-bot .name{
+    header .space-bot .name {
         font-size: 1.5rem;
     }
 
-    header.develop{
+    header .navbar {
+        padding: 10%;
+    }
+
+    header.develop {
         min-height: 500px;
     }
 }
@@ -1097,13 +1091,10 @@ footer.arc .feedback .tel-nums {
         margin: 10%;
     }
 
-    section.robot-card .other-pics .pic{
+    section.robot-card .other-pics .pic {
         height: 70px;
     }
 
-    header .navbar {
-        padding: 10%;
-    }
 
     header .navbar .logo img {
         width: 100%;
