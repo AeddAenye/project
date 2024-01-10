@@ -21,6 +21,7 @@ body {
 
 :root {
     --blue: #60748D;
+    --light-blue: #6d94c3;
 }
 
 /* Стили хэдера */
@@ -70,22 +71,15 @@ header .navbar li {
 header .navbar li a {
     text-decoration: none;
     color: black;
-
-    transition: all 0.2s ease;
+    transition: font-weight .4s ease-in-out;
 }
 
 header .navbar li.active a {
-    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 header .navbar li a:hover {
-    cursor: pointer;
-    color: white;
-}
-
-header .navbar li.active a:hover {
-    cursor: pointer;
-    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
 header .corp-name {
@@ -200,19 +194,12 @@ footer .refs li a {
 }
 
 footer .refs li.active a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.2s ease;
-}
-
-footer .refs li.active a:hover {
-    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 footer .refs li a:hover {
-    color: black;
+    font-weight: bold;
 }
-
 
 footer .feedback {
     font-size: 2.25rem;
@@ -262,7 +249,7 @@ footer .logo-second>img {
         font-size: 3rem;
     }
 
-    footer .feedback .tel-nums{
+    footer .feedback .tel-nums {
         font-size: 2rem;
     }
 }
@@ -373,5 +360,71 @@ section.history .card {
         width: 30vw;
 
     }
+
+}
+
+
+
+/* Вкладка контакты */
+section.info-card,
+section.map {
+    margin: 10% 8% 6% 8%;
+}
+
+section.info-card {
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.info-card .pic {
+    width: 80%;
+}
+
+section.info-card .pic img {
+    width: 100%;
+    margin-top: -10%;
+    
+
+}
+
+section.info-card .description {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    color: #FFF;
+    font-family: Pobeda;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+section.info-card .description div{
+    margin: 20px 0px;
+}
+
+section.info-card .description .telephone {
+    color: #FFF;
+    font-family: Pobeda;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 980px) {
+
+section.info-card .description div{
+    font-size: 1.2rem !important;
+    margin: 10px 0px;
+}
 
 }
