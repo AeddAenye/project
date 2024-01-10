@@ -1,11 +1,9 @@
-/* Общие стили для всего документа */
 body {
     margin: 0;
     padding: 0;
     font-family: Pobeda;
 }
 
-/* Подключение шрифтов */
 @font-face {
     font-family: Pobeda;
     src: url(../fonts/pobeda-regular.ttf);
@@ -21,7 +19,6 @@ body {
     src: url(../fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
-/* Переменные для цветов */
 :root {
     --blue: #60748D;
     --light-blue: #6d94c3;
@@ -33,6 +30,7 @@ header {
     flex-direction: column;
     position: relative;
     z-index: 10;
+
 }
 
 header .navbar {
@@ -55,18 +53,20 @@ header .navbar .logo img {
     width: 100%;
 }
 
+
 header .navbar ul {
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
 header .navbar li {
     list-style-type: none;
-    padding: 0 30px;
+    padding: 0px 30px;
 }
+
 
 header .navbar li a {
     text-decoration: none;
@@ -74,7 +74,10 @@ header .navbar li a {
     transition: font-weight .4s ease-in-out;
 }
 
-header .navbar li.active a,
+header .navbar li.active a {
+    font-weight: bold;
+}
+
 header .navbar li a:hover {
     font-weight: bold;
 }
@@ -93,15 +96,19 @@ header .corp-name span {
     letter-spacing: 0em;
     text-align: center;
     color: white;
+
     display: inline-block;
     width: 100%;
 }
 
-/* Стили главной страницы */
 header.main-page {
     height: 150svh;
     min-height: 680px;
-    background: url(../imgs/main-page-backgrnd.png) center/cover rgba(96, 116, 141, 0.20);
+    background: url(../imgs/main-page-backgrnd.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(96, 116, 141, 0.20);
 }
 
 header.main-page .background {
@@ -116,12 +123,13 @@ header.main-page .background {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .tower .img {
     width: 30%;
     height: 100%;
-    margin: 10svw 0;
+    margin: 10svw 0px;
 }
 
 .tower .img img {
@@ -133,7 +141,7 @@ header.main-page .background {
 }
 
 .tower .questions div {
-    margin: 15svw 0;
+    margin: 15svw 0px;
 }
 
 .tower .questions div span {
@@ -154,8 +162,7 @@ footer {
     justify-content: space-between;
 }
 
-footer .refs,
-footer .feedback {
+footer .refs {
     font-size: 2.25rem;
     font-weight: 400;
     line-height: 2.25rem;
@@ -167,34 +174,43 @@ footer .feedback {
 footer ul {
     padding: 0;
     margin: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+
 footer .refs li {
-    margin: 20px 0;
+    margin: 20px 0px;
     list-style-type: none;
 }
 
-footer .refs li a,
-footer .refs li.active a,
-footer .refs li a:hover {
+footer .refs li a {
     text-decoration: none;
     color: white;
-    transition: font-weight .4s ease-in-out;
-    font-weight: normal;
+    transition: color 0.2s ease;
 }
 
-footer .refs li.active a,
+footer .refs li.active a {
+    font-weight: bold;
+}
+
 footer .refs li a:hover {
     font-weight: bold;
 }
 
-footer .feedback,
-footer .feedback div {
+footer .feedback {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    letter-spacing: 0em;
+    text-align: left;
     color: white;
+
+    width: 30%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,25 +219,36 @@ footer .feedback div {
 
 footer .feedback div {
     padding: 10px;
-    margin: 20px 0;
+    margin: 20px 0px;
 }
 
-footer .logo-first>img,
+footer .logo-first>img {
+    width: 100%;
+}
+
 footer .logo-second>img {
     width: 100%;
 }
 
-/* Медиа запросы для адаптивности */
 @media screen and (max-width: 1100px) {
     header .navbar li {
-        padding: 0 10px;
+        padding: 0px 10px;
     }
 }
 
 @media screen and (max-width: 860px) {
-    header .navbar,
-    header .corp-name span,
-    .tower .questions div span,
+    header .navbar {
+        font-size: 2rem;
+    }
+
+    header .corp-name span {
+        font-size: 3rem;
+    }
+
+    .tower .questions div span {
+        font-size: 3rem;
+    }
+
     footer .feedback .tel-nums {
         font-size: 2rem;
     }
@@ -233,12 +260,18 @@ footer .logo-second>img {
     }
 }
 
+
+
 /* Вкладка история */
-header.history,
-section.history {
+
+header.history {
     height: 150svh;
     min-height: 680px;
-    background: url(../imgs/history-header.png) center/cover rgba(96, 116, 141, 0.20);
+    background: url(../imgs/history-header.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(96, 116, 141, 0.20);
 }
 
 header .question {
@@ -254,7 +287,9 @@ header .question span {
     letter-spacing: 0em;
     text-align: left;
     color: white;
+
 }
+
 
 section.history {
     margin: 8%;
@@ -264,11 +299,12 @@ section.history .card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 10%;
+
 }
 
 section.history .card .pic img {
     width: 20vw;
+
 }
 
 section.history .card .pic {
@@ -285,7 +321,12 @@ section.history .description {
     line-height: normal;
 }
 
+section.history .card {
+    margin-top: 10%;
+}
+
 @media screen and (max-width: 1550px) {
+
     section.history .card .text,
     section.history .description {
         font-size: 1.2rem;
@@ -293,6 +334,7 @@ section.history .description {
 }
 
 @media screen and (max-width: 1200px) {
+
     section.history .card .text,
     section.history .description {
         font-size: 1rem;
@@ -304,6 +346,7 @@ section.history .description {
 
     section.history .card .pic img {
         width: 25vw;
+
     }
 
     section.history {
@@ -312,10 +355,15 @@ section.history .description {
 }
 
 @media screen and (max-width: 860px) {
+
     section.history .card .pic img {
         width: 30vw;
+
     }
+
 }
+
+
 
 /* Вкладка контакты */
 section.info-card,
@@ -337,6 +385,8 @@ section.info-card .pic {
 section.info-card .pic img {
     width: 100%;
     margin-top: -10%;
+
+
 }
 
 section.info-card .description {
@@ -344,6 +394,7 @@ section.info-card .description {
     display: flex;
     flex-direction: column;
     align-items: start;
+
     color: #FFF;
     font-family: Pobeda;
     font-size: 2rem;
@@ -352,8 +403,9 @@ section.info-card .description {
     line-height: normal;
 }
 
+
 section.info-card .description div {
-    margin: 20px 0;
+    margin: 20px 0px;
 }
 
 section.info-card .description .telephone {
@@ -364,12 +416,271 @@ section.info-card .description .telephone {
     font-weight: 400;
     line-height: normal;
     text-decoration-line: underline;
+
     margin-bottom: 10%;
 }
 
 @media screen and (max-width: 980px) {
+
     section.info-card .description div {
         font-size: 1.2rem !important;
-        margin: 10px 0;
+        margin: 10px 0px;
+    }
+
+}
+
+/* Вкладка разработки */
+
+header.develop {
+    height: 100svh;
+    min-height: 1100px;
+    background: url(../imgs/dev-header.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(96, 116, 141, 0.20);
+    position: relative;
+
+}
+
+header.develop .navbar {
+    background: linear-gradient(180deg, #FFF -31.5%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+header.develop .space-bot .name {
+    color: #FFF;
+    font-family: Pobeda;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.space-bot {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+    position: absolute;
+    top: 40%;
+    left: 5%;
+
+}
+
+.space-bot div {
+    margin: 15px;
+}
+
+header.develop .space-bot .text {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section.dev-cards,
+section.robot-card {
+    margin: 10% 13% 6% 13%;
+}
+
+.robot-card {
+    padding: 0% 2% 5% 2%;
+}
+
+section.robot-card {
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+section.robot-card .pic {
+    width: 80%;
+    position: relative;
+}
+
+section.robot-card .pic img {
+    width: 100%;
+    margin-top: -25%;
+}
+
+section.robot-card .description {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #FFF;
+    font-family: Pobeda;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10%;
+}
+
+section.robot-card .description div {
+    margin: 20px 0;
+}
+
+
+section.robot-card .description .name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Pobeda;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section.robot-card .description .text {
+    width: 100%;
+    color: #FFF;
+    text-align: justify;
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section.robot-card .other-pics {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.robot-card .other-pics>.pic:nth-child(2) {
+    margin: 0px 70px;
+}
+
+section.robot-card .other-pics>.pic>img {
+    width: 100%;
+}
+
+
+section.dev-cards .card .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+section.dev-cards .card .pic {
+    width: 450px;
+    height: 350px;
+    margin-right: 80px;
+}
+
+section.dev-cards {
+    margin: 10% 13% 6% 13%;
+}
+
+section.dev-cards .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5%;
+}
+
+section.dev-cards .description {
+    width: 60%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+
+section.dev-cards .description .name {
+    color: #000;
+    font-family: Pobeda;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+section.dev-cards .description .text {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer.dev {
+    background: white;
+}
+
+footer.dev .refs ul li a,
+footer.dev .feedback .tel-nums {
+    color: black;
+}
+
+@media screen and (max-width: 1350px) {
+    .space-bot {
+        width: 60%;
+    }
+
+    section.dev-cards .card .description .name {
+        font-size: 2rem;
+    }
+
+    section.dev-cards .card .description .text {
+        font-size: 1rem;
+    }
+
+    section.dev-cards .card .pic {
+        margin-right: 40px;
+    }
+
+    section.dev-cards,
+    section.robot-card {
+        margin: 10% 8% 6% 8%;
+    }
+
+    section.robot-card {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    header.develop .space-bot .text{
+        font-size: 1rem;
+    }
+    section.robot-card .description .text{
+        font-size: 1rem;
+    }
+
+    section.robot-card .other-pics>.pic:nth-child(2) {
+        margin: 0px 30px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    section.dev-cards .card .pic {
+        width: 400px;
+        height: 300px;
+    }
+
+    section.dev-cards .card .description{
+        height: 300px;
+    }
+
+    section.dev-cards .card .description .name {
+        font-size: 1.5rem;
     }
 }
