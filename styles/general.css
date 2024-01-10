@@ -764,14 +764,15 @@ section.slider .interface button img {
 }
 
 section.slider .interface .slide {
-    width: 50%;
+    width: 400px;
+    height: 300px;
+    margin-top: -15%;
 }
 
 section.slider .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    margin-top: -15%;
 }
 
 section.slider .other-slides {
@@ -1180,4 +1181,8 @@ footer.arc .feedback .tel-nums {
     footer .refs {
         width: 50%;
     }
+}
+
+.other-slides .pic.active {
+    border: 2px solid #ffffff; /* Цвет обводки для активного слайда */
 }

@@ -47,23 +47,56 @@
 
     <section class="slider">
         <div class="interface">
-            <div class="prev"><button type="button"><img src="imgs/prev.svg" alt=""></button></div>
+            <div class="prev"><button type="button" onclick="changeSlide(-1)"><img src="imgs/prev.svg" alt=""></button></div>
             <div class="slide"><img src="imgs/slider-img1.png" alt=""></div>
-            <div class="next"><button type="button"><img src="imgs/next.svg" alt=""></button></div>
+            <div class="next"><button type="button" onclick="changeSlide(1)"><img src="imgs/next.svg" alt=""></button></div>
         </div>
         <div class="other-slides">
             <div class="row">
-                <div class="pic"><img src="imgs/slide-2.jpeg" alt=""></div>
-                <div class="pic"><img src="imgs/slide-3.jpeg" alt=""></div>
-                <div class="pic"><img src="imgs/slide-4.jpeg" alt=""></div>
+                <div class="pic active" onclick="changeSlideTo(0)"><img src="imgs/slide-2.jpeg" alt=""></div>
+                <div class="pic" onclick="changeSlideTo(1)"><img src="imgs/slide-3.jpeg" alt=""></div>
+                <div class="pic" onclick="changeSlideTo(2)"><img src="imgs/slide-4.jpeg" alt=""></div>
             </div>
             <div class="row">
-                <div class="pic"><img src="imgs/slide-5.jpeg" alt=""></div>
-                <div class="pic"><img src="imgs/slide-6.jpeg" alt=""></div>
-                <div class="pic"><img src="imgs/slide-7.jpeg" alt=""></div>
+                <div class="pic" onclick="changeSlideTo(3)"><img src="imgs/slide-5.jpeg" alt=""></div>
+                <div class="pic" onclick="changeSlideTo(4)"><img src="imgs/slide-6.jpeg" alt=""></div>
+                <div class="pic" onclick="changeSlideTo(5)"><img src="imgs/slide-7.jpeg" alt=""></div>
             </div>
         </div>
     </section>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.other-slides .pic img');
+        const slideContainer = document.querySelector('.interface .slide img');
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else if (currentSlideIndex >= slides.length) {
+                currentSlideIndex = 0;
+            }
+
+            slideContainer.src = slides[currentSlideIndex].src;
+            updateActiveSlide();
+        }
+
+        function changeSlideTo(index) {
+            currentSlideIndex = index;
+            slideContainer.src = slides[currentSlideIndex].src;
+            updateActiveSlide();
+        }
+
+        function updateActiveSlide() {
+            // Remove active class from all slides
+            slides.forEach(slide => slide.parentElement.classList.remove('active'));
+
+            // Add active class to the current slide
+            slides[currentSlideIndex].parentElement.classList.add('active');
+        }
+    </script>
 
     <footer class="arc">
         <div class="refs">
@@ -81,7 +114,6 @@
             <div class="tel-nums">+7 (812) 552-01-10</div>
             <div class="logo-second"><img src="imgs/black-logo-second.svg" alt=""></div>
         </div>
-
     </footer>
 </body>
 
