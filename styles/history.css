@@ -28,9 +28,6 @@ header .question span {
 
 }
 
-header li.active {
-    font-weight: bold;
-}
 
 section.history {
     margin: 8%;
