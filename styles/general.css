@@ -81,6 +81,10 @@ header .navbar li a:hover {
     font-weight: bold;
 }
 
+header .navbar .burger{
+    display: none;
+}
+
 header .corp-name {
     margin: 0 auto;
     margin-top: 40px;
@@ -216,7 +220,6 @@ footer .feedback {
 }
 
 footer .feedback div {
-    padding: 10px;
     margin: 20px 0px;
 }
 
@@ -301,8 +304,9 @@ section.history .card {
 }
 
 section.history .card .pic img {
-    width: 20vw;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 section.history .card .pic {
@@ -353,10 +357,8 @@ section.history .card {
 }
 
 @media screen and (max-width: 860px) {
-
     section.history .card .pic img {
         width: 30vw;
-
     }
 
 }
@@ -438,7 +440,6 @@ header.develop {
     background-size: cover;
     background-color: rgba(96, 116, 141, 0.20);
     position: relative;
-
 }
 
 header.develop .navbar {
@@ -454,7 +455,7 @@ header.develop .space-bot .name {
     line-height: normal;
 }
 
-.space-bot {
+header.develop.space-bot {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -465,7 +466,7 @@ header.develop .space-bot .name {
 
 }
 
-.space-bot div {
+header.develop.space-bot div {
     margin: 15px;
 }
 
@@ -655,11 +656,12 @@ footer.dev .feedback .tel-nums {
     }
 }
 
-@media screen and (max-width: 1150px){
-    header.develop .space-bot .text{
+@media screen and (max-width: 1150px) {
+    header.develop .space-bot .text {
         font-size: 1rem;
     }
-    section.robot-card .description .text{
+
+    section.robot-card .description .text {
         font-size: 1rem;
     }
 
@@ -674,7 +676,7 @@ footer.dev .feedback .tel-nums {
         height: 300px;
     }
 
-    section.dev-cards .card .description{
+    section.dev-cards .card .description {
         height: 300px;
     }
 
@@ -791,7 +793,7 @@ section.slider .other-slides {
     justify-content: center;
 }
 
-section.slider .other-slides>.pic{
+section.slider .other-slides>.pic {
     width: 15%;
     margin: 10px;
 }
@@ -812,7 +814,7 @@ footer.arc .feedback .tel-nums {
 }
 
 @media screen and (max-width: 1450px) {
-    section.scheme .text{
+    section.scheme .text {
         font-size: 1.25rem;
         margin-left: 0px;
     }
@@ -820,7 +822,7 @@ footer.arc .feedback .tel-nums {
 
 @media screen and (max-width: 1200px) {
 
-    section.scheme .text{
+    section.scheme .text {
         width: 70%;
     }
 
@@ -828,19 +830,19 @@ footer.arc .feedback .tel-nums {
         width: 350px;
         height: 670px;
     }
-    
+
     section.scheme .tower img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     section.scheme .arrow img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     section.scheme .arrow {
         width: 8px;
         height: 600px;
@@ -850,12 +852,222 @@ footer.arc .feedback .tel-nums {
 }
 
 @media screen and (max-width: 980px) {
-    section.scheme .text{
+
+    header .navbar{
+        padding: 5%;
+    }
+
+    section.scheme .text {
         font-size: 1rem;
     }
 
     section.scheme .arrow {
         margin-right: -20px;
         margin-bottom: -20px;
+    }
+
+    header.history{
+        height: 150svh;
+        min-height: 680px;
+        background: url(../imgs/history-header-mobile.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(96, 116, 141, 0.20);
+    }
+
+    header.history .question span{
+        color: black;
+        font-weight: bold;
+    }
+
+    header.history .question{
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*Мобильная версия*/
+@media screen and (max-width: 860px) {
+
+    header.main-page .navbar {
+        padding: 7%;
+    }
+
+    header .navbar ul{
+        display: none;
+    }
+
+    header .navbar .logo img {
+        width: 150%;
+        margin-bottom: -10px;
+    }
+
+    header .navbar .burger {
+        width: 70px;
+        height: 70px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    header .navbar .burger span.line {
+        display: inline-block;
+        width: 50px;
+        height: 5px;
+        background-color: black;
+    }
+
+    header .corp-name{
+        display: none;
+    }
+
+    .tower .questions{
+        display: none;
+    }
+
+    .tower .img{
+        width: 70%;
+    }
+
+    footer .feedback,
+    footer .refs{
+        width: 40%;
+    }
+
+    footer .feedback .tel-nums,
+    footer .refs li a {
+        font-size: 1.2rem;
+    }
+
+    footer .refs li{
+        margin: 10px 0px;
+    }
+    header.history .question span{
+        font-size: 2rem;
+
+    }
+    section.history .card .pic{
+        width: 50svw;
+    }
+
+    section.history .description{
+       font-size: 0.8rem;
+    }
+
+    section.history .card .text{
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    section.info-card, section.map{
+        margin: 5%;
+    }
+
+    section.info-card{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    section.history{
+        margin: 10%;
+    }
+
+    header .navbar{
+        padding: 10%;
+    }
+
+    header .navbar .logo img {
+        width: 100%;
+        margin-bottom: -10px;
+    }
+
+    header .navbar .burger {
+        width: 50px;
+        height: 50px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    section.history .card{
+        flex-direction: column;
+    }
+
+    section.history .card .pic{
+        width: 100%;
+        margin-right: 0;
+    }
+    section.history .card .pic img{
+        width: 100%;
+
+    }
+
+    section.history .description{
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    section.history .card .text{
+        font-size: 1rem;
+        margin: 20px 0px;
+    }
+
+    section.history .card .text span{
+        display: inline-block;
+        width: 100%;
+    }
+
+    section.info-card{
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    section.map{
+        background-color: var(--blue);
+        padding: 20px;
+        margin-top: 0;
+        margin-bottom: 20%;
+    }
+
+    section.map iframe{
+        height: 200px;
+    }
+
+
+section.info-card .description div{
+    font-size: 1rem !important;
+}
+}
+
+@media screen and (max-width: 400px){
+
+}
+
+@media screen and (max-width: 300px){
+
+    header .navbar .logo img {
+        width: 70%;
+        margin-bottom: -10px;
+        
+    }
+
+    footer .feedback,
+    footer .refs{
+        width: 50%;
     }
 }
