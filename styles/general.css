@@ -304,9 +304,7 @@ section.history .card {
 }
 
 section.history .card .pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+width: 30svw;
 }
 
 section.history .card .pic {
