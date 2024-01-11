@@ -1100,6 +1100,35 @@ footer.arc .feedback .tel-nums {
         margin-right: 0;
     }
 
+    section.history .card {
+        flex-direction: column;
+    }
+
+    section.history .card .pic {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    section.history .card .pic img {
+        width: 100%;
+
+    }
+
+    section.history .description {
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    section.history .card .text {
+        font-size: 1rem;
+        margin: 20px 0px;
+    }
+
+    section.history .card .text span {
+        display: inline-block;
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1153,35 +1182,6 @@ footer.arc .feedback .tel-nums {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-    }
-
-    section.history .card {
-        flex-direction: column;
-    }
-
-    section.history .card .pic {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    section.history .card .pic img {
-        width: 100%;
-
-    }
-
-    section.history .description {
-        margin-bottom: 20px;
-        font-size: 1rem;
-    }
-
-    section.history .card .text {
-        font-size: 1rem;
-        margin: 20px 0px;
-    }
-
-    section.history .card .text span {
-        display: inline-block;
-        width: 100%;
     }
 
     section.info-card {
