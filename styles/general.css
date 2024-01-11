@@ -790,6 +790,10 @@ section.slider .other-slides .row{
 section.slider .other-slides .pic {
     width: 100%;
     margin: 10px;
+    border: 2px solid var(--blue)
+}
+section.slider .other-slides .pic.active {
+    border: 2px solid white
 }
 
 section.slider .other-slides .pic img {
