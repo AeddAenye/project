@@ -12,18 +12,17 @@
     <header>
         <div class="navbar">
             <a href="#" class="logo"><img src="imgs/logo-header.svg" alt=""></a>
-            <ul>
-                <li><a href="#">История</a></li>
-                <li><a href="#">Архитектура</a></li>
-                <li><a href="#">Разработки</a></li>
-                <li><a href="#">Контакты</a></li>
+            <ul class="menu">
+                <li><a class="menuItem" href="#">История</a></li>
+                <li><a class="menuItem active" href="#">Архитектура</a></li>
+                <li><a class="menuItem" href="#">Разработки</a></li>
+                <li><a class="menuItem" href="#">Контакты</a></li>
             </ul>
 
-            <div class="burger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
+            <button class="hamburger">
+                <img src="imgs/list.svg" alt="" class="menuIcon">
+                <img src="imgs/close.svg" alt="" class="closeIcon">
+              </button>
         </div>
     </header>
 
@@ -65,39 +64,6 @@
         </div>
     </section>
 
-    <script>
-        let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('.other-slides .pic img');
-        const slideContainer = document.querySelector('.interface .slide img');
-
-        function changeSlide(direction) {
-            currentSlideIndex += direction;
-
-            if (currentSlideIndex < 0) {
-                currentSlideIndex = slides.length - 1;
-            } else if (currentSlideIndex >= slides.length) {
-                currentSlideIndex = 0;
-            }
-
-            slideContainer.src = slides[currentSlideIndex].src;
-            updateActiveSlide();
-        }
-
-        function changeSlideTo(index) {
-            currentSlideIndex = index;
-            slideContainer.src = slides[currentSlideIndex].src;
-            updateActiveSlide();
-        }
-
-        function updateActiveSlide() {
-            // Remove active class from all slides
-            slides.forEach(slide => slide.parentElement.classList.remove('active'));
-
-            // Add active class to the current slide
-            slides[currentSlideIndex].parentElement.classList.add('active');
-        }
-    </script>
-
     <footer class="arc">
         <div class="refs">
             <ul>
@@ -115,6 +81,9 @@
             <div class="logo-second"><img src="imgs/black-logo-second.svg" alt=""></div>
         </div>
     </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/slider.js"></script>
 </body>
 
 </html>

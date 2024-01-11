@@ -12,18 +12,17 @@
     <header class="contacts">
         <div class="navbar">
             <a href="#" class="logo"><img src="imgs/logo-header.svg" alt=""></a>
-            <ul>
-                <li><a href="#">История</a></li>
-                <li><a href="#">Архитектура</a></li>
-                <li><a href="#">Разработки</a></li>
-                <li><a href="#">Контакты</a></li>
+            <ul class="menu">
+                <li><a class="menuItem" href="#">История</a></li>
+                <li><a class="menuItem" href="#">Архитектура</a></li>
+                <li><a class="menuItem" href="#">Разработки</a></li>
+                <li><a class="menuItem active" href="#">Контакты</a></li>
             </ul>
 
-            <div class="burger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
+            <button class="hamburger">
+                <img src="imgs/list.svg" alt="" class="menuIcon">
+                <img src="imgs/close.svg" alt="" class="closeIcon">
+              </button>
         </div>
     </header>
 
@@ -62,6 +61,7 @@
         </div>
 
     </footer>
+    <script src="scripts/hamburger.js"></script>
 </body>
 
 </html>
