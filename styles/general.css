@@ -45,7 +45,7 @@ header .navbar {
     letter-spacing: 0em;
     text-align: left;
     height: 5svh;
-    background: linear-gradient(180deg, #FFFFFF -31.5%, rgba(255, 255, 255, 0) 96.67%);
+    background: linear-gradient(180deg, #FFF -31.5%, rgba(255, 255, 255, 0.00) 100%);
     z-index: 10;
 }
 
